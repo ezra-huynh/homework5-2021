@@ -119,13 +119,14 @@ header{
 /*Req 7a*/
 .about, .method, .client, .contacts{
   /*Your Code Here*/
-  grid-column: 1 / span 2;
+  grid-column: 2 / 4;
 }
 
 /*Req 8a, 8b, and 8c*/
 .about-image, .method-image, .client-image, .contact-image{
   /*Your Code Here*/
-  column-span: all;
+  /*column-span: all;*/
+  grid-column: 1/-1;
   max-height: 650px;
   overflow: hidden;
 }
@@ -133,25 +134,25 @@ header{
 /*Req 7b & 8d*/
 .about, .about-image{
    /*Your Code Here*/
-   grid-row: 1 / span 1;
+   grid-row: 1 / 2;
 }
 
 /*Req 7b & 8d*/
 .method, .method-image{
    /*Your Code Here*/
-   grid-row: 2 / span 1;
+   grid-row: 2 / 3;
 }
 
 /*Req 7b & 8d*/
 .client, .client-image{
     /*Your Code Here*/
-    grid-row: 3 / span 1;
+    grid-row: 3 / 4;
 }
 
 /*Req 7b & 8d*/
 .contacts, .contact-image{
     /*Your Code Here*/
-    grid-row: 4 / span 1;
+    grid-row: 4 / 5;
 }
 
 /*Req 9*/
@@ -175,21 +176,29 @@ header{
   nav{
     padding: 30px 0px;
     /*Your code here:*/
+    /*position: absolute;
+    right: 0px;*/
+    text-align: right;
+    vertical-align: middle;
   }
 
   /*Req 11*/
   .container{
     /*Your code here:*/
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 400px 425px 425px 400px;
   }
 
   /*Req 12*/
   .about, .client, .method-image, .contact-image{
     /*Your code here:*/
+    grid-column: 3 / 5;
   }
 
   /*Req 13*/
   .about-image, .client-image, .method, .contacts{
     /*Your code here:*/
+    grid-column: 2 / 4;
   }
 }
 
